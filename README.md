@@ -24,7 +24,7 @@ Our team divided the work into sections which allowed each team member to work t
         XINYU ZHOU: Adjusted files to enhance their compatibility with map conversion and distance calculation based on latitude and longitude relative to the center of a zip code. Generated density map with user interaction
 
 
-        AHNAF ABRAR KABIR: Implemented and trained a Deep Learning algorithm to identify probability of a costly hazardous event occurring within specific zip codes and provide support on merging all project components.
+        AHNAF ABRAR KABIR: Performed Data Engineering, and trained multiple Machine Learning models and chose the best one using 5 fold cross validation, to identify probability of a costly hazardous event occurring based on zip codes in Chicago and provide support on merging all project components.
 
 
 Conclusion: 
