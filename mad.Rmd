@@ -1,0 +1,41 @@
+
+---
+title:  "MADDATA"
+documentclass: article
+output: html_document
+---
+
+<style>
+table{width:50%!important;margin-left:auto!important;margin-right:auto!important;}
+ol[style*="decimal"]>li{margin-top:40px!important;}
+</style>
+
+<br/>
+
+## XKCD comic
+
+<center><a href="https://xkcd.com/539/"><img id="comic" src="https://imgs.xkcd.com/comics/boyfriend.png" title="... okay, but because you said that, we're breaking up."></a></center>
+
+---
+
+
+
+```{r}
+# TODO: uncomment the lines below and complete them
+# 
+chiZip = read.csv("chiZip.csv")
+tail(chiZip,10)
+countcar = read.csv("zipcode_counts.csv")
+head(countcar,10)
+colnames(chiZip)[colnames(chiZip) == "Zip"] <- "zip_code"
+merged <- inner_join(countcar, chiZip, by = "zip_code")
+head(merged,10)
+write.csv(merged, file = "merged.csv", row.names = FALSE)
+
+```
+```{r}
+damage = read.csv('zipcode_and_crash_cost.csv')
+colnames(damage)[colnames(damage) == "zipcode"] <- "zip_code"
+combine <- inner_join(damage, chiZip, by = "zip_code")
+write.csv(combine, file = "combined.csv", row.names = FALSE)
+```
